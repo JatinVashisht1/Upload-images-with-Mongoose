@@ -7,7 +7,7 @@ module.exports = async function connection() {
             useCreateIndex: true,
             useUnifiedTopology: true,
         };
-        await mongoose.connect(process.env.DB, connectionParams);
+        await mongoose.connect('mongodb://localhost/photosavedb', connectionParams);
         console.log("connected to database");
     } catch (error) {
         console.log(error);
